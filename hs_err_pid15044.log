@@ -1,0 +1,215 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 67108864 bytes for G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3469), pid=15044, tid=15860
+#
+# JRE version:  (17.0.1+12) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.1+12, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Dfile.encoding=Cp1252 -XX:+ShowCodeDetailsInExceptionMessages org.testng.remote.RemoteTestNG -serport 51786 -protocol json -d C:\Users\anamendra.y(2420)\eclipse-workspace\automateDemo\test-output C:\Users\ANAMEN~1.Y(2\AppData\Local\Temp\testng-eclipse--1256355639\testng-customsuite.xml
+
+Host: Intel(R) Core(TM) i5-4590T CPU @ 2.00GHz, 4 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1348)
+Time: Mon Mar  7 14:18:59 2022 India Standard Time elapsed time: 0.036617 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000264e9f1fe60):  JavaThread "Unknown thread" [_thread_in_vm, id=15860, stack(0x000000870c600000,0x000000870c700000)]
+
+Stack: [0x000000870c600000,0x000000870c700000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6744da]
+V  [jvm.dll+0x82e144]
+V  [jvm.dll+0x82f8ee]
+V  [jvm.dll+0x82ff53]
+V  [jvm.dll+0x245175]
+V  [jvm.dll+0x6714c9]
+V  [jvm.dll+0x665f92]
+V  [jvm.dll+0x303c3b]
+V  [jvm.dll+0x30b176]
+V  [jvm.dll+0x35af1e]
+V  [jvm.dll+0x35b14f]
+V  [jvm.dll+0x2dab78]
+V  [jvm.dll+0x2dbae4]
+V  [jvm.dll+0x7ffdf1]
+V  [jvm.dll+0x368c91]
+V  [jvm.dll+0x7df2cc]
+V  [jvm.dll+0x3eb59f]
+V  [jvm.dll+0x3ed121]
+C  [jli.dll+0x5277]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff876234e58, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000264e9f4dfe0 GCTaskThread "GC Thread#0" [stack: 0x000000870c700000,0x000000870c800000] [id=4728]
+  0x00000264e9f57bc0 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000870c800000,0x000000870c900000] [id=3448]
+  0x00000264e9f584e0 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000870c900000,0x000000870ca00000] [id=14944]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff875a0b5f7]
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00000264e9f1bcb0] Heap_lock - owner thread: 0x00000264e9f1fe60
+
+Heap address: 0x00000000c1400000, size: 1004 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+Heap:
+ garbage-first heap   total 0K, used 0K [0x00000000c1400000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff875ded729]
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (1 events):
+Event: 0.013 Loaded shared library C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin\java.dll
+
+
+Dynamic libraries:
+0x00007ff6b5e10000 - 0x00007ff6b5e1e000 	C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin\javaw.exe
+0x00007ff8a87f0000 - 0x00007ff8a89e5000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ff8a7120000 - 0x00007ff8a71de000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ff8a61f0000 - 0x00007ff8a64b8000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ff8a66a0000 - 0x00007ff8a67a0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ff89ded0000 - 0x00007ff89dee8000 	C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin\jli.dll
+0x00007ff896460000 - 0x00007ff896479000 	C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin\VCRUNTIME140.dll
+0x00007ff8a6f70000 - 0x00007ff8a7111000 	C:\WINDOWS\System32\USER32.dll
+0x00007ff8a6670000 - 0x00007ff8a6692000 	C:\WINDOWS\System32\win32u.dll
+0x00007ff8a8240000 - 0x00007ff8a826b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ff8a5f00000 - 0x00007ff8a600d000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ff8a6120000 - 0x00007ff8a61bd000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ff894b20000 - 0x00007ff894dba000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e\COMCTL32.dll
+0x00007ff8a84a0000 - 0x00007ff8a853e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ff8a6830000 - 0x00007ff8a6860000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ff8971a0000 - 0x00007ff8971ac000 	C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin\vcruntime140_1.dll
+0x00007ff888130000 - 0x00007ff8881c1000 	C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin\msvcp140.dll
+0x00007ff875720000 - 0x00007ff876366000 	C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin\server\jvm.dll
+0x00007ff8a6990000 - 0x00007ff8a6a3c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ff8a72a0000 - 0x00007ff8a733b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ff8a6860000 - 0x00007ff8a698a000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ff8a87a0000 - 0x00007ff8a87a8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ff8941b0000 - 0x00007ff8941b9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ff8a8730000 - 0x00007ff8a879b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ff897bc0000 - 0x00007ff897be7000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ff8a4ce0000 - 0x00007ff8a4cea000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ff8a4ca0000 - 0x00007ff8a4cb2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ff8a26c0000 - 0x00007ff8a26ca000 	C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin\jimage.dll
+0x00007ff8935f0000 - 0x00007ff8937d4000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ff893520000 - 0x00007ff89354c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ff8a67a0000 - 0x00007ff8a6822000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ff8a25c0000 - 0x00007ff8a25e5000 	C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1110_none_60b5254171f9507e;C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657\jre\bin\server
+
+VM Arguments:
+jvm_args: -ea -Dfile.encoding=Cp1252 -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: org.testng.remote.RemoteTestNG -serport 51786 -protocol json -d C:\Users\anamendra.y(2420)\eclipse-workspace\automateDemo\test-output C:\Users\ANAMEN~1.Y(2\AppData\Local\Temp\testng-eclipse--1256355639\testng-customsuite.xml
+java_class_path (initial): C:\Users\anamendra.y(2420)\eclipse\java-2021-12\eclipse\configuration\org.eclipse.osgi\429\0\.cp\lib\testng-remote.jar;C:\Users\anamendra.y(2420)\eclipse-workspace\automateDemo\target\test-classes;C:\Users\anamendra.y(2420)\eclipse-workspace\automateDemo\target\classes;C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.testng_7.4.0.r202105021533.jar;C:\Users\anamendra.y(2420)\.p2\pool\plugins\com.beust.jcommander_1.78.0.jar;C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.apache-extras.beanshell.bsh_2.0.0.b6.jar;C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.yaml.snakeyaml_1.21.0.jar;C:\Users\anamendra.y(2420)\.p2\pool\plugins\org.webjars.jquery_3.5.1.jar;C:\Users\anamendra.y(2420)\.m2\repository\org\seleniumhq\selenium\selenium-java\4.1.1\selenium-java-4.1.1.jar;C:\Users\anamendra.y(2420)\.m2\repository\org\seleniumhq\selenium\selenium-api\4.1.1\selenium-api-4.1.1.jar;C:\Users\anamendra.y(2420)\.m2\repository\org\seleniumhq\selenium\selenium-chrome-driver\4.1.1\selenium-chrome-driver-4.1.1.jar;C:\Users\anamendra.y(2420)\.m2\repository\com\google\auto\service\auto-service-annotations\1.0.1\auto-service-annotations-1.0.1.jar;C:\Users\anamendra.y(2420)\.m2\repository\com\google\auto\service\auto-service\1.0.1\auto-service-1.0.1.jar;C:\Users\anamendra.y(2420)\.m2\repository\com\google\auto\auto-common\1.2\auto-common-1.2.jar;C:\Users\anamendra.y(2420)\.m2\repository\com\google\guava\guava\31.0.1-jre\guava-31.0.1-jre.jar;C:\Users\anamendra.y(2420)\.m2\repository\com\google\guava\failureaccess\1.0.1\failureaccess-1.0.1.jar;C:\Users\anamendra.y(2420)\.m2\repository\com\google\guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar;C:\Users\anamendra.y(2420)\.m2\repository\com\google\code\findbugs\jsr305\3.0.2\jsr305-3.0.2.jar;C:\Users\anamendra.y(2420)\.m2\repository\org\checkerframework\checker-qual\3.12.0\checker-qual-3.12.0.jar;C:\Users\anamendra.y(2420)\.m2\repository\com
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 67108864                                  {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 1052770304                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832780                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122912730                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122912730                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 1052770304                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:/Users/anamendra.y(2420)/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657/jre/bin/server;C:/Users/anamendra.y(2420)/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_17.0.1.v20211116-1657/jre/bin;"C:\Program Files\nodejs\node_modules\npm\bin;C:\Users\anamendra.y(2420)\Downloads\chromedriver_win32;";C:\Python310\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Users\anamendra.y(2420)\Downloads\apache-ant-1.10.12\apache-ant-1.10.12\bin;C:\Program Files\Intel\iCLS Client\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\System32\OpenSSH\;D:\Softwares\apache-jmeter-5.2.1\apache-jmeter-5.2.1\bin;D:\apache-ant-1.9.9\bin;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files (x86)\dotnet\;C:\ProgramData\chocolatey\bin;C:\Program Files\Microsoft VS Code\bin;C:\apache-maven-3.8.4\bin;C:\Program Files\dotnet\;C:\Users\anamendra.y(2420)\AppData\Local\Microsoft\WindowsApps;C:\Users\anamendra.y(2420)\AppData\Roaming\npm;C:\Users\anamendra.y(2420)\.dotnet\tools;C:\WINDOWS\system32;
+USERNAME=anamendra.y(2420)
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.1348)
+OS uptime: 0 days 4:16 hours
+
+CPU: total 4 (initial active 4) (4 cores per cpu, 1 threads per core) family 6 model 60 stepping 3 microcode 0x27, cx8, cmov, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, fma, vzeroupper, clflush
+
+Memory: 4k page, system-wide physical 4013M (263M free)
+TotalPageFile size 10526M (AvailPageFile size 58M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 51M, peak: 115M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.1+12) for windows-amd64 JRE (17.0.1+12), built on Oct 20 2021 07:42:55 by "" with MS VC++ 16.7 (VS2019)
+
+END.
